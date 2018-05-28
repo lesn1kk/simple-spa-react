@@ -1,11 +1,11 @@
 import React, { Component } from "react";
+import Content from '../components/Content';
+import contentData from '../assets/contentData';
 
 class Home extends Component {
   render() {
     return(
-      <div>
-          Lorem ipsum
-      </div>
+      <Content content={contentData.home} />
     )
   }
 }

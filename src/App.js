@@ -1,19 +1,27 @@
 import React, {Component} from 'react';
 import {Route, HashRouter} from "react-router-dom";
-import {withStyles} from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Drawer from '@material-ui/core/Drawer';
 import Divider from '@material-ui/core/Divider';
+import { MuiThemeProvider, createMuiTheme, withStyles } from '@material-ui/core/styles';
 
 import Menu from './components/Menu';
 import Banner from './components/Banner';
-import Home from './pages/Home';
-import Gallery from './pages/Gallery';
+import Routes from './routes/index';
 import './App.css';
 
 const drawerWidth = 240;
-const toolbarHeight = 100;
+const toolbarHeight = 200;
+
+const theme = createMuiTheme({
+  palette: {
+    menuItem: {
+      primaryColor: '#02c1ee',
+      secondaryColor: '#fcc308',
+    }
+  }
+});
 
 const styles = theme => ({
   paper: {
@@ -36,12 +44,15 @@ const styles = theme => ({
   toolbar: {
     height: toolbarHeight,
     display: 'flex',
+    padding: 0,
+    overflow: 'hidden',
   },
   content: {
     flexGrow: 1,
     backgroundColor: theme.palette.background.primary,
     padding: theme.spacing.unit * 3,
     marginTop: toolbarHeight,
+    display: 'block',
   },
   appBar: {
     zIndex: theme.zIndex.drawer + 1,
@@ -54,28 +65,31 @@ class App extends Component {
 
     return (
       <HashRouter>
-        <div className={classes.root}>
-          <AppBar
-            position='absolute'
-            className={classes.appBar}
-          >
-            <Toolbar className={classes.toolbar}>
-              <Banner height={toolbarHeight} width={'100%'} />
-            </Toolbar>
-          </AppBar>
-          <Drawer
-            variant='permanent'
-            className={classes.paperDrawer}
-          >
-            <div className={classes.toolbar} />
-            <Divider />
-            <Menu menuWidth={drawerWidth}/>
-          </Drawer>
-          <main className={classes.content}>
-            <Route exact path="/" component={Home}/>
-            <Route path="/gallery" component={Gallery}/>
-          </main>
-        </div>
+        <MuiThemeProvider theme={theme}>
+          <div className={classes.root}>
+            <AppBar
+              position='absolute'
+              className={classes.appBar}
+            >
+              <Toolbar className={classes.toolbar}>
+                <Banner height={toolbarHeight} width={'100%'} />
+              </Toolbar>
+            </AppBar>
+            <Drawer
+              variant='permanent'
+              className={classes.paperDrawer}
+            >
+              <div className={classes.toolbar} />
+              <Divider />
+              <Menu menuWidth={drawerWidth}/>
+            </Drawer>
+            <main className={classes.content}>
+              {Routes.map((route) => (
+                <Route exact path={route.path} component={route.component} key={route.name}/>
+              ))}
+            </main>
+          </div>
+        </MuiThemeProvider>
       </HashRouter>
     );
   }

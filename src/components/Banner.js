@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class Banner extends Component {
   render() {
     return(
-      <img src='http://via.placeholder.com/700x150' height={ this.props.height } width={ this.props.width } alt='Banner'/>
+      <img src={process.env.PUBLIC_URL + '/banner.jpg'} className='App-banner' alt='Banner'/>
     )
   }
 }
