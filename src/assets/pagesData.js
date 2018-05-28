@@ -6,7 +6,7 @@ import SztolniaCzarnegoPstraga from '../pages/SztolniaCzarnegoPstraga';
 const pagesData = [
   {
     name: 'Strona glowna',
-    path: '/Home',
+    path: '/',
     component: Home
   },
   {

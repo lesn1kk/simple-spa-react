@@ -39,7 +39,7 @@ class Menu extends Component {
 
     return(
         <MenuList className={classes.menuList} style={{ width: this.props.menuWidth }}>
-          <NavLink to="/Home" style={{ textDecoration: 'none' }}>
+          <NavLink to="/" style={{ textDecoration: 'none' }}>
             <MenuItem>
               <ListItemText classes={{ primary: classes.menuItem }} primary='Strona głowna' />
             </MenuItem>
@@ -50,7 +50,7 @@ class Menu extends Component {
           </MenuItem>
           <Collapse in={this.state.open} timeout='auto' unmountOnExit>
             {pagesData.map((page) => (
-              page.path !== '/Home' ?
+              page.path !== '/' ?
                 <NavLink to={page.path} style={{ textDecoration: 'none' }} key={page.name}>
                   <MenuItem className={classes.menuItemNested}>{page.name}</MenuItem>
                 </NavLink>

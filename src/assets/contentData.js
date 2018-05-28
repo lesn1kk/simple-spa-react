@@ -1,7 +1,7 @@
 const contentData = {
   home: {
     objectName: 'home',
-    title: 'Strona glowna',
+    title: 'Zabytki Tarnowskich Gor',
     body: ['Przykladowy tekst'],
   },
   kopalniaZabytkowa: {
