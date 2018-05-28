@@ -28,9 +28,8 @@ const photosData = {
   ],
   muzeumChleba: [
     {
-      img: 'http://via.placeholder.com/300x300',
-      title: 'Image1',
-      author: 'author',
+      img: process.env.PUBLIC_URL + '/photos/muzeum_001.jpg',
+      title: 'Muzeum chleba',
       height: 200
     }
   ],

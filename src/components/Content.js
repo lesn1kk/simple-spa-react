@@ -23,10 +23,10 @@ class Content extends Component {
 
     return(
       <div className={classes.root}>
-        <Typography className={classes.title} variant='title'>
+        <Typography className={classes.title} variant='display1'>
           {pageContent.title}
         </Typography>
-        <Typography className={classes.body} variant='body2'>
+        <Typography className={classes.body} variant='subheading'>
           {pageContent.body.map((element) => (
             <div>
               {element}

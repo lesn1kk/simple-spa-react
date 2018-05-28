@@ -1,8 +1,15 @@
+import React from 'react';
+
 const contentData = {
   home: {
     objectName: 'home',
     title: 'Zabytki Tarnowskich Gor',
-    body: ['Przykladowy tekst'],
+    body: ['Tarnowskie Góry to urocze, historyczne miasto położone w województwie śląskim, na skraju konurbacji górnośląskiej, około 30 km od Katowic i Gliwic, przy trasie nr 11 (Bytom-Poznań), w pobliżu Jeziora Nakło-Chechło. Blisko stąd jest do dobrodziejstw dużych miast, natomiast sam ośrodek otoczony jest kompleksami leśnymi, kryjącymi atrakcyjne zbiorniki wodne, wytyczone ścieżki rowerowe i inne atrakcje.',
+    <h5></h5>,
+    <h1 style={{ color: 'rgba(0, 0, 0, 0.54)', fontSize: '2.125rem' }}>Historia Tarnowskich Gor</h1>,
+    'Miasto Tarnowskie Góry założył książę opolski Jan II Dobry w 1526 roku, co związane było z odkryciem bogactw mineralnych (rudy cynku i ołowiu z domieszką srebra). Odkrył je słynny dziś w mieście chłop Rybka. Wkrótce, bo w 1528 roku Tarnowskie Góry otrzymały Ordynek Gorny czyli ustawę górniczą. Dzięki temu Gwarkowie czyli górnicy pracowali w podziemnych chodnikach, a mieszczanie bogacili się.',
+    'Z czasem sprowadzono tu maszyny parowe, które pomagały w odwadnianiu chodników, a przyczynił sie do tego wielce hrabia Fryderyk Wilhelm von Reden. Ważną rolę w historii miasta odegrał też Rudolf von Carnall, który kierował Górnośląską Szkołą Górniczą w Tarnowskich Górach.Dziś po wielowiekowej eksploatacji górniczej pozostała gęsta sieć podziemnych wyrobisk, ciągnących się pod całym miastem.'
+    ],
   },
   kopalniaZabytkowa: {
     objectName: 'kopalniaZabytkowa',
