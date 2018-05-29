@@ -19,7 +19,7 @@ class GalleryCarousel extends Component {
             <li data-target="#photosCarousel" data-slide-to={index} className={(index === 0 ? 'active' : '')} key={photo.img}></li>
           ))}
         </ol>
-        <div className='carousel-inner d-flex align-items-end'>
+        <div className='carousel-inner d-flex align-items-end' style={{ minWidth: '512px' }}>
           {objectPhotos.map((photo, index) => (
               <div className={'carousel-item ' + (index === 0 ? 'active' : '')} style={{ paddingLeft: 100, paddingRight: 100, paddingBottom: 100 }} key={photo.img}>
                 <div style={{ height: '450px', display: 'flex', alignItems: 'center', overflow: 'hidden' }}>

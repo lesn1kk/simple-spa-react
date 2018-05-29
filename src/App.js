@@ -68,7 +68,7 @@ class App extends Component {
         <MuiThemeProvider theme={theme}>
           <div className={classes.root}>
             <AppBar
-              position='absolute'
+              position='fixed'
               className={classes.appBar}
             >
               <Toolbar className={classes.toolbar}>
